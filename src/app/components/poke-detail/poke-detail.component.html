@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card">
+    <h1 class="name">{{ data.name }}</h1>
+    <hr class="hr" />
+    <img class="img" [src]="data.img" alt="pokemon" />
+    <hr class="hr" />
+    <div class="espesificacion grip">
+      <div>
+        <h1 class="titles">TYPES:</h1>
+        <p class="title">{{ data.types[0] }}</p>
+      </div>
+      <div>
+        <h1 class="titles" *ngIf="data.types.length > 1">TYPES:</h1>
+        <p class="title">{{ data.types[1] }}</p>
+      </div>
+      <div>
+        <h1 class="titles">HEIGHT:</h1>
+        <p class="title">{{ data.height }}</p>
+      </div>
+      <div>
+        <h1 class="titles">WEIGHT:</h1>
+        <p class="title">{{ data.weight }}</p>
+      </div>
+    </div>
+    <a class="a" href="home">
+      <button class="button">Home</button>
+    </a>
+  </div>
+</div>
